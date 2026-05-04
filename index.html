@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro timer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Gradient -->
+    <svg width="0" height="0" style="position:absolute;">
+        <defs>
+            <linearGradient id="timerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#6366f1" />
+                <stop offset="50%" style="stop-color:#8b5cf6" />
+                <stop offset="100%" style="stop-color:#ec4899" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-inner glass">
+                <div class="header-icon">tH</div>
+                <h1 class="header-title">Pomodoro Timer by <span>the_Hrust</span></h1>
+            </div>
+        </header>
+
+        <!-- MAIN TIMER CARD -->
+        <section class="timer-card glass glass-hover">
+            <!-- Mode Switcher -->
+            <div class="mode-switcher">
+                <button class="mode-btn active">Work Time</button>
+                <button class="mode-btn">Short Break</button>
+                <button class="mode-btn">Long Break</button>
+            </div>
+
+            <!-- Timer Display -->
+            <div class="timer-display">
+                <div class="timer-ring">
+                    <svg viewBox="0 0 240 240">
+                        <circle class="timer-ring-bg" cx="120" cy="120" r="110" />
+                        <circle class="timer-ring-progress" cx="120" cy="120" r="110" />
+                    </svg>
+                    <div class="timer-text">25:00</div>
+                </div>
+                <div class="timer-label">Focus on your task</div>
+            </div>
+
+            <!-- Start Button -->
+            <button class="start-btn">Start</button>
+        </section>
+
+        <!-- CYCLE SLIDER -->
+        <section class="cycle-card glass glass-hover">
+            <div class="cycle-header">
+                <span class="cycle-label">Long Break After</span>
+                <span class="cycle-value">4 cycles</span>
+            </div>
+            <div class="cycle-slider-container">
+                <input type="range" class="cycle-slider" min="1" max="6" value="4">
+                <div class="cycle-marks">
+                    <span class="cycle-mark">1</span>
+                    <span class="cycle-mark">2</span>
+                    <span class="cycle-mark">3</span>
+                    <span class="cycle-mark">4</span>
+                    <span class="cycle-mark">5</span>
+                    <span class="cycle-mark">6</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TO-DO LIST -->
+        <section class="todo-section">
+            <h2 class="todo-title">To Do List</h2>
+
+            <div class="todo-input-card glass">
+                <input type="text" class="todo-input" placeholder="Add a new task...">
+                <button class="todo-add-btn">+</button>
+            </div>
+
+            <div class="todo-list">
+                <div class="todo-item glass">
+                    <div class="todo-checkbox"></div>
+                    <span class="todo-text">Review project requirements</span>
+                    <button class="todo-delete">×</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="social-links">
+                <!-- Telegram -->
+                <a href="#" class="social-link" aria-label="Telegram">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M21.2 3.8L2.4 10.9c-1.1.4-1.1 1.1-.2 1.4l4.9 1.5 1.9 5.8c.2.6.1.9.6.9.4 0 .6-.2.8-.4l2.1-2.1 4.2 3.1c.8.4 1.3.2 1.5-.7l2.7-12.8c.3-1.1-.4-1.6-1.1-1.3z" />
+                    </svg>
+                </a>
+                <!-- GitHub -->
+                <a href="#" class="social-link" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                </a>
+                <!-- LinkedIn -->
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>
